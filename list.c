@@ -1,8 +1,8 @@
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
-
 #include "list.h"
+#include "max.h"
 
 void add(node *head, int x) {
   // pre:  head points to the first, empty element.
@@ -27,7 +27,7 @@ int size(node *l) {
     count++;
   }
 
-	return 0;
+	return count;
 }
 
 // exersice 3.c and 3.d
@@ -39,16 +39,28 @@ void printout(node *l) {
   while (p != NULL) {
     printf("%d, ", p->data);
   }
+  if (p == NULL) { /* The last node with node.next=NULL holds a value, which we print */
+    printf("%d", p->data);
+  }
   printf("\n");
 }
 
-// exersice 3.e
+// exercise 3.e
 int largest(node *l) {
-  // pre:  head poinst to the first, empty element.
+  // pre:  head points to the first, empty element.
   // 	     The last element's next is NULL.
   // post: Returns the largest value of the list
+  
+  int amount_of_nodes = size(l); /*Finds the amount of nodes*/
+  int array_of_nodes[amount_of_nodes]; /* Creates array with the amount of nodes being the size */
 
-  return 0;
+  for (int i = 0; i < amount_of_nodes; i++) {
+    array_of_nodes[i] = l->data;    /* We insert the node's data*/
+    l = l->next;                    /* Then find the next node for next iteration */
+  }
+  
+  int max_num = max(array_of_nodes, amount_of_nodes);
+  return max_num;
 }
 
 #ifndef TEST
