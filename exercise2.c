@@ -16,16 +16,15 @@ int max(int* numbers, int size){
 
 int main(void){
     srand(time(NULL));
-    int x = rand();
-    int* y;
+    int size = rand()%40;
 
-    int random_array[x];
-    for (int i = 0; i < x; i++) {
+    int random_array[size];
+    for (int i = 0; i < size; i++) {
         random_array[i] = rand(); // Generate a random integer and store it in the array
     }
 
-    // y = &random_array;
-    int maxNum = max(random_array,x);
+    int *y = &random_array;
+    int maxNum = max(y, size);
     printf("%d", maxNum);
 
     return 0;
