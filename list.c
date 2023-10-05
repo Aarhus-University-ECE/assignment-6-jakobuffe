@@ -60,6 +60,7 @@ int largest(node *l) {
   }
   
   int max_num = max(array_of_nodes, amount_of_nodes);
+  printf("%d", max_num);
   return max_num;
 }
 
