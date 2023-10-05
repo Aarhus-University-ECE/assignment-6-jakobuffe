@@ -2,10 +2,6 @@
 
 int max(int *numbers, int size);
 
-#ifndef max.h
-#define max.h
 
+extern int max(int *numbers, int size);
 
-int max(int *numbers, int size);
-
-#endif
