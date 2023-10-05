@@ -5,7 +5,7 @@
 #include <assert.h>
 
 int max(int* numbers, int size){
-    int maxNum = 0;
+    int maxNum = numbers[0];
     for (int i = 0; i < size; i++)
     {
         if (numbers[i]>maxNum)
@@ -13,7 +13,7 @@ int max(int* numbers, int size){
             maxNum = numbers[i];
         }
     }
-    assert(maxNum>0);
+    //assert(maxNum>0);
     return maxNum;
 }
 /*
