@@ -76,7 +76,8 @@ int main() {
   add(list, 2);
   // Show list here
 
-  largest(list);
+  int max_num = largest(list);
+  printf("The max number is: %d\n", max_num);
   return 0;
 }
 
