@@ -21,6 +21,11 @@ void add(node *head, int x) {
 
 // exersice 3.b
 int size(node *l) {
+  int count = 1;
+  while (l->next != NULL) {
+    l = l->next;
+    count++;
+  }
 
 	return 0;
 }
