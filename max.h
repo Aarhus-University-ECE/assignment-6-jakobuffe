@@ -2,8 +2,9 @@
 
 int max(int *numbers, int size);
 
-#ifndef HELPER_H
-#define HELPER_H
+#ifndef max.h
+#define max.h
+
 
 int max(int *numbers, int size);
 

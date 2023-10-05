@@ -58,7 +58,7 @@ int largest(node *l) {
     array_of_nodes[i] = l->data;    /* We insert the node's data*/
     l = l->next;                    /* Then find the next node for next iteration */
   }
-  
+
   int max_num = max(array_of_nodes, amount_of_nodes);
   printf("%d", max_num);
   return max_num;
@@ -76,6 +76,7 @@ int main() {
   add(list, 2);
   // Show list here
 
+  largest(list);
   return 0;
 }
 
