@@ -16,7 +16,7 @@ int max(int* numbers, int size){
     //assert(maxNum>0);
     return maxNum;
 }
-/*
+
 int main(void){
     srand(time(NULL));
     int size = rand()%40;
@@ -29,7 +29,8 @@ int main(void){
     //int *y = &random_array;
     int maxNum = max(random_array, size);
     printf("%d", maxNum);
+    int numbers[] = {-2, -5, -42, -67, -100, -1};
+    assert(max(numbers, 6) == -1);
 
     return 0;
 }
-*/
